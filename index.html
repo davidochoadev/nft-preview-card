@@ -5,29 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
   
   <title>Frontend Mentor | NFT preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
+  <main class="main__container">
+    <div class="card__container">
 
-  Equilibrium #3429
+      <div class="img__container">
+        <div class="image__overlay">
+          <img src="/images/icon-view.svg" alt="View More Icon" class="view__icon">
+        </div>
+      </div>
 
-  Our Equilibrium collection promotes balance and calm.
+      <h1 class="card__title">Equilibrium #3429</h1>
 
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <p class="card__description">Our Equilibrium collection promotes balance and calm.</p>
+      <div class="card__information-container">
+        <span class="card__price">
+          <img src="/images/icon-ethereum.svg" alt="Ethereum Icon">
+          <p>0.041 ETH</p>
+        </span>
+        <span class="card__expiration">
+          <img src="/images/icon-clock.svg" alt="Clock Icon">
+          <p>3 days left</p>
+        </span>
+      </div>
+      <div class="card__credits-container">
+        <img src="/images/image-avatar.png" alt="Jules Wyvern Profile Picture" class="card__credits-user-avatar">
+        <p class="card__credits-txt-content">Creation of   <p class="card__creator-name">Jules Wyvern</p></p>
+      </div>
+    </div>
+  </main>  
+  <footer class="author__credits">
+    <a href="https://davidochoa.fly.dev" target="_blank">davidochoa.dev</a>
+     | <a href="https://github.com/davidochoadev/nft-preview-card">Source Code</a>
+  </footer>
 </body>
 </html>

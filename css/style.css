@@ -1,0 +1,218 @@
+:root {
+   --soft-blue: hsl(215, 51%, 70%);
+   --cyan: hsl(178, 100%, 50%);
+   --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+   --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+   --very-dark-blue-line: hsl(215, 32%, 27%);
+   --white: hsl(0, 0%, 100%);
+}
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+* {
+   box-sizing: border-box;
+   border: 0px solid black;
+   margin: 0;
+   padding: 0;
+}
+body {
+   margin:0;
+   font-family: 'Outfit', sans-serif;
+   background-color: var(--very-dark-blue-main-bg);
+   min-height: 100vh;
+   display: grid;
+   place-items: center;
+}
+
+.main__container {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: var(--very-dark-blue-main-bg);
+}
+
+.img__container {
+  margin-bottom: 15px;
+  border-radius: 10px;
+  min-width: 300px;
+  height: 300px;
+  background: url(../images/image-equilibrium.jpg);
+  background-size: 100%;
+  overflow: hidden;
+
+}
+
+.image__overlay {
+   height: 100%;
+   backdrop-filter: blur(2px);
+   background-color: rgba(2, 252, 252, 0.3);
+   display: grid;
+   place-items: center;
+   opacity: 0;
+   cursor: pointer;
+   place-items: center;
+ }
+
+ .image__overlay:hover {
+   opacity: 1; /* Cambia l'opacità dell'overlay solo durante l'hover */
+ }
+ 
+.view__icon {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 50px;
+   opacity: 1;
+   height: 50px;
+ }
+
+.card__nft-img{
+   max-width:300px;
+   max-height:300px;
+   border-radius: 10px;
+}
+
+.card__container {
+   width: min-content;
+   background-color: var(--very-dark-blue-card-bg);
+   border-radius: 15px;
+   padding: 26px;
+}
+
+.card__title {
+   font-weight: 600;
+   font-size: 22px;
+   color: var(--white);
+   transition-duration: 0.3s;
+}
+
+.card__title:hover {
+   color: var(--cyan);
+   cursor: pointer;
+}
+
+.card__description {
+   font-weight: 300;
+   font-size: 18px;
+   color: var(--soft-blue);
+   padding:10px 0;
+}
+
+.card__information-container {
+   display: flex;
+   padding-bottom: 10px;
+}
+
+.card__price {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   gap: 7px;
+   font-weight: 600;
+   color: var(--cyan);
+}
+
+.card__price img {
+   height: fit-content;
+}
+
+.card__price p {
+   margin: 10px 0;
+}
+
+.card__expiration {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   justify-content: flex-end;
+   gap: 7px;
+      color: var(--soft-blue);
+}
+
+.card__expiration img {
+   height: fit-content;
+}
+
+.card__expiration p {
+   margin: 10px 0;
+}
+
+.card__credits-container {
+   display: flex;
+   align-items: center;
+   border-top: 1px solid var(--very-dark-blue-line);
+   gap: 5px;
+   padding-top: 10px;
+}
+
+.card__credits-container img {
+   width: 36px;
+   height: 36px;
+   margin-right: 16px;
+   border: 1px solid var(--white);
+   border-radius: 100%;
+}
+
+.card__credits-txt-content{
+   color: var(--soft-blue);
+}
+
+.card__creator-name {
+   color: var(--white);
+   transition-duration: 0.3s;
+}
+
+.card__creator-name:hover {
+   color: var(--cyan);
+   cursor: pointer;
+}
+
+.author__credits {
+   width: 100%;
+   position: fixed;
+   bottom:0;
+   display: flex;
+   justify-content: center;
+   text-transform: uppercase;
+   gap: 5px;
+   color: var(--soft-blue);
+   padding: 10px;
+   font-weight: 600;
+}
+
+.author__credits a{
+   text-decoration: none;
+   color: var(--soft-blue);
+   transition-duration: 0.7s;
+}
+
+.author__credits a:hover {
+   color: var(--cyan);
+}
+
+@media screen and (max-width: 375px) {
+   .card__container {
+      max-width: fit-content;
+      width: 100%;
+      margin: 0 24px;
+      padding: 24px;
+   }
+   .img__container {
+      height: 278px;
+      object-fit: contain;
+   }
+
+   .card__description {
+      font-size: 17px;
+   }
+
+   .card__credits-container img {
+      width: 33px;
+      height: 33px;
+   }
+
+   .author__credits {
+      transform: scale
+   }
+
+ }
